@@ -1,0 +1,22 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: A simple stack.
+
+Parameters:
+  Project:
+    Description: 'The project that these resources are for.'
+    Type: 'String'
+    Default: 'tc'
+
+Resources:
+  HelloWorldLambda:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: !Sub "${Project}-hello-world-function"
+      Handler: hello_world.lambda_handler
+      Runtime: python3.8
+      CodeUri: ./src
+      Description: Says hello to world.
+      MemorySize: 128
+      Timeout: 3
