@@ -7,7 +7,7 @@ Parameters:
   Project:
     Description: 'The project that these resources are for.'
     Type: 'String'
-    Default: 'tc'
+    Default: 'tc-test-gh-actions'
   GitHubRepoUrl:
     Type: 'String'
     Default: "https://github.com/timcooper314/automatic-disco.git"
@@ -84,7 +84,7 @@ Resources:
   BuildProject:
     Type: AWS::CodeBuild::Project
     Properties:
-      Name: !Sub "${Project}-build-project"
+      Name: !Sub "${Project}-build-proj"
       ServiceRole: !GetAtt BuildProjectRole.Arn
       TimeoutInMinutes: 10
       Cache:
@@ -93,7 +93,8 @@ Resources:
           - LOCAL_DOCKER_LAYER_CACHE
       Artifacts:
         Type: S3
-        Path: !Ref ArtifactS3Bucket
+        Location: !Ref ArtifactS3Bucket
+        Path: "codebuild_artifacts"
         Name: "/"
         NamespaceType: BUILD_ID
       BadgeEnabled: true
