@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - pip install awscli aws-sam-cli
+      - chmod +x ./deploy.sh
+  build:
+    commands:
+      - ./deploy.sh
+cache:
+  paths:
+    - '/root/.m2/**/*'
