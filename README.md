@@ -1,3 +1,17 @@
 # automatic-disco
 
 ![CodeBuild](https://codebuild.ap-southeast-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiS3FSNnArdS9FTVdzcUJQRmZmTGNOV2tac2ZRTWhhRDA1K3Q4V1FUQnJWTEoyZFpiM0RFZ2ZDSXo5b2h2UjhjT2pWOHpnNVBZbUIralFqNmpXNkcxckkwPSIsIml2UGFyYW1ldGVyU3BlYyI6ImVLVkIzeUpvTFlEREU1bVIiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
+
+A minimal repository setup for using GitHub actions to trigger an AWS CodeBuild job, to deploy AWS resources via CloudFormation and AWS SAM.
+
+###Requirements:
+- AWS CLI installed and configured.
+- Add GitHub secrets `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` to your repository settings.
+- `GITHUB_REPO_URL` and `GITHUB_OAUTH_TOKEN` in a (gitignored) file `codebuild/github.config`.
+###Setup:
+- Deploy the CodeBuild project defined in codebuild.yaml, by running `./deploy.sh` (change the script variables as necessary).
+- Change the `project-name` in `.github/workflows/build.yaml` to match the name of the CodeBuild project deployed.
+- Copy the badge URL from the CodeBuild project in the AWS console, and paste into the repository README.
+- `buildspec.yaml` is used by the CodeBuild project, to call the deploy script.
+- `deploy.sh` uses aws-sam to deploy your CloudFormation template.
+- `template.yaml` specifies the AWS resources to be deployed.
