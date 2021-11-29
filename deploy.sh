@@ -3,7 +3,7 @@ set -e
 
 PROJECT_NAME="tc-test"
 STACK_NAME="${PROJECT_NAME}-hello-world"
-BUCKET_NAME="tc-test-gh-actions-artifacts-281121"
+BUCKET_NAME="tc-test-gh-actions-artifacts-291121"
 
 echo "AWS SAM packaging..."
 echo ${BUCKET_NAME}

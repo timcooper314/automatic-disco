@@ -3,6 +3,7 @@ phases:
   pre_build:
     commands:
       - pip install awscli aws-sam-cli
+      - echo ${TEST_BUCKET_NAME}
       - chmod +x ./deploy.sh
   build:
     commands:
