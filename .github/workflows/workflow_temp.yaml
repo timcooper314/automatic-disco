@@ -1,4 +1,4 @@
-name: CodeBuild
+name: Feature/new-workflow
 
 on:
   push:
@@ -22,5 +22,9 @@ jobs:
       uses: aws-actions/aws-codebuild-run-build@v1
       with:
         project-name: tc-test-gh-actions-build-proj
+        env-vars-for-codebuild: |
+          TEST_BUCKET_NAME,
+          TEST_PROJECT_NAME
       env:
         TEST_BUCKET_NAME: "tc-test-bucket"
+        TEST_PROJECT_NAME: "tc-test-proj"
