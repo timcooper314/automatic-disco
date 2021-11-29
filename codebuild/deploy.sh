@@ -1,7 +1,6 @@
 #!/bin/sh
 
 PROJECT="tc-test-gh-actions"
-BUCKET_NAME="tc-test-code-packages"
 REGION="ap-southeast-2"
 
 # Source github config global variables

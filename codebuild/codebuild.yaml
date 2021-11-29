@@ -19,7 +19,7 @@ Resources:
   ArtifactS3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Sub "${Project}-artifacts-281121"
+      BucketName: !Sub "${Project}-artifacts-291121"
       Tags:
         - Key: Project
           Value: !Ref Project
