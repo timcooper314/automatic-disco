@@ -19,4 +19,4 @@ Resources:
       CodeUri: ./src
       Description: Says hello to world.
       MemorySize: 128
-      Timeout: 3
+      Timeout: 5
