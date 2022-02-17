@@ -1,4 +1,5 @@
-# automatic-disco
+# cicd-codebuild-gh-flow
+
 master:
 ![master](https://codebuild.ap-southeast-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiQVZhTTJDYW54VmFReWFGWDltTUszdU11NXNHRUhyN2xuR0xpSWF6SEhNeExKWTF0MTd2Rk9UTVhtZWR3cUs5QkVjVWpsWGF4KzlDQTgzV3BHcEdxNW9zPSIsIml2UGFyYW1ldGVyU3BlYyI6IjNpaDJ5V204SlpvRGdEd0QiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 

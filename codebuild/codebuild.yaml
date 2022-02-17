@@ -10,7 +10,7 @@ Parameters:
     Default: 'tc-test-gh-actions'
   GitHubRepoUrl:
     Type: 'String'
-    Default: "https://github.com/timcooper314/automatic-disco.git"
+    Default: "https://github.com/timcooper314/cicd-codebuild-gh-flow.git"
   GitHubOAuthToken:
     Type: 'String'
     NoEcho: true
