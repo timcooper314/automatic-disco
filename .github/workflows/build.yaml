@@ -23,7 +23,3 @@ jobs:
       uses: aws-actions/setup-sam@v1
     - name: SAM Deploy
       run: ./deploy.sh
-      with:
-        project-name: tc-test-gh-actions-build-proj
-      env:
-        TEST_BUCKET_NAME: "tc-test-bucket"
