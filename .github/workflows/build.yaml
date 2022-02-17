@@ -22,4 +22,6 @@ jobs:
     - name: SAM Setup
       uses: aws-actions/setup-sam@v1
     - name: SAM Deploy
-      run: ./deploy.sh
+      run: |
+        chmod +x deploy.sh
+        ./deploy.sh
